@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+
+.page {
+  background-color: rgb(106, 99, 99);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100%;
+  margin:0;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  background-color:rgba(255,255,255,0.3);
+  width:300px;
+  height: 300px;
+}
+
+.cell {
+width: calc(100% / 3);
+display:flex;
+align-items: center;
+justify-content: center;
+border: 1px solid black;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+.cell:not(:empty) {
+  pointer-events: none;
+}
+
+.cell:hover {
+  background-color: red;
+}

@@ -1,0 +1,30 @@
+Architecture:
+
+interface: HTML and CSS(cursor)
+    HTML: 1 main div and 9 child div (width 1/3 of the parent);
+        FLEXBOX:
+         display: flex-wrap: wrap;
+         2 players( x and 0)
+
+
+         
+
+    Javascript
+
+    Functionality:
+
+         EventListener
+         switching between players
+         check for winning
+         DOM manipualtion: players turn, winning message
+         start again button
+
+
+   Questions:
+         how we store the positions that have been chosen:
+         given that we have a small matrix of only 9 numbers and only 8 winning combinations, I will refer to each cell by its ID.
+
+         how to know if a user won:
+         conditionals if
+         after each gameplay we are going to check whether any player has one of the winning combunations;
+
