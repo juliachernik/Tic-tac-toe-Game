@@ -38,23 +38,32 @@ function checkForWin() {
     if (
       cells[firstCellIndex].innerHTML === cells[secondCellIndex].innerHTML &&
       cells[secondCellIndex].innerHTML === cells[thirdCellIndex].innerHTML &&
-      cells[firstCellIndex].innerHTML !== "" 
+      cells[firstCellIndex].innerHTML !== ""
     ) {
-      alert("Player " + activePlayer + " won!");
-      window.location.reload();
+      showOverlay();
+      const finalMessage = document.querySelector(".final-message");
+      finalMessage.innerHTML = "Player " + activePlayer + " won";
     }
   });
-  console.log(cells[0]);
 }
- function checkForDraw () {
-    let hasEmptyCells = false;
-    cells.forEach(cell => {
-      if (cell.innerHTML === '') {
-        hasEmptyCells = true;
-      }
-    });
-    if (!hasEmptyCells) {
-      alert("It's a draw");
-      window.location.reload();
+function checkForDraw() {
+  let hasEmptyCells = false;
+  cells.forEach((cell) => {
+    if (cell.innerHTML === "") {
+      hasEmptyCells = true;
     }
- }
+  });
+  if (!hasEmptyCells) {
+    showOverlay();
+    const finalMessage = document.querySelector(".final-message");
+    finalMessage.innerHTML = "It's a draw!";
+  }
+}
+function showOverlay() {
+  const overlay = document.querySelector(".overlay");
+  overlay.classList.remove("hidden");
+}
+const button = document.querySelector(".button");
+button.addEventListener("click", function () {
+  window.location.reload();
+});

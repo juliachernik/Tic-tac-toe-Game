@@ -10,9 +10,15 @@
 
 </head>
 
-<body class="page"> 
-  <span class="message">It's player <span class="turn">X</span>'s turn now</span>
-  <div class="table"> 
+<body class="page">
+  <div class="overlay hidden">
+    <div class="card">
+      <span class="final-message"></span>
+      <button class="button">Start again</button>
+    </div>
+  </div>
+  <span class="message">It is player <span class="turn">X</span>'s turn now</span>
+  <div class="table">
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -24,7 +30,7 @@
     <div class="cell"></div>
   </div>
 
- <!--div.cell*9-->
+  <!--div.cell*9-->
 
   <script src="./js/main.js"></script>
 </body>
